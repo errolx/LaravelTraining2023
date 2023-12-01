@@ -16,7 +16,7 @@
 							</div>
 							<div class="d-sm-none">
 								<h2 class="h5">Users</h2>
-								<h3 class="fw-extrabold mb-1">345,678</h3>
+								<h3 class="fw-extrabold mb-1">345,678 </h3>
 							</div>
 						</div>
 						<div class="col-12 col-xl-7 px-xl-0">

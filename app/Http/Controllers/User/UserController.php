@@ -25,8 +25,8 @@ class UserController extends Controller
 
 		// users
 		// paginate with query
-		$users = User::where('name', 'LIKE', '%'.$searchVal.'%')->whereNot('id', auth()->user()->id)->paginate(5)->withQueryString();
-		
+		$users = User::where('name', 'LIKE', '%' . $searchVal . '%')->whereNot('id', auth()->user()->id)->paginate(5)->withQueryString();
+
 		return view('user.index', compact('users', 'searchVal'));
 	}
 
@@ -106,6 +106,5 @@ class UserController extends Controller
 
 		// redirect to users page
 		return redirect()->route('users.index')->with('status', 'User has been successfully deleted.');
-
 	}
 }

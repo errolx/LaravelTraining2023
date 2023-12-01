@@ -20,6 +20,7 @@
 			</a>
 		</div>
 	</div>
+
 	<div class="table-settings mb-4">
 		<div class="row align-items-center justify-content-between">
 			<div class="col col-md-6 col-lg-3 col-xl-4">
@@ -36,6 +37,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="card card-body border-0 shadow table-wrapper table-responsive mb-5">
 		<table class="table table-hover">
 			<thead>
