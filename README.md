@@ -2,6 +2,7 @@
 
 This boilerplate uses Laravel PHP Framework V10 and Volt Bootstrap Admin Template.
 
+*Created during the CVISNET training for basic web app using laravel php framework
 
 ## Features
 
