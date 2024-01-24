@@ -9,9 +9,9 @@
 					<a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
 						<div class="media d-flex align-items-center">
-							<img class="avatar rounded-circle" alt="Image placeholder" src="{{ asset('img/team/profile-picture-3.jpg') }}">
+							<img class="avatar rounded-circle" alt="Image placeholder" src="{{ asset('img/team/profile-picture-3.png') }}">
 							<div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-								<span class="mb-0 font-small fw-bold text-gray-900">Bonnie Green</span>
+								<span class="mb-0 font-small fw-bold text-gray-900">hello, {{ Auth::user()->name }}</span>
 							</div>
 						</div>
 					</a>

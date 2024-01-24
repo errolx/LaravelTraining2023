@@ -38,6 +38,14 @@ class StoreUserRequest extends FormRequest
 				'confirmed',
 				Password::default(),
 			],
+			'role' => [
+				'required',
+				'string',
+			],
+			'dept' => [
+				'nullable',
+				'string',
+			],
 		];
 	}
 }

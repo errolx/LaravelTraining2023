@@ -33,6 +33,14 @@ class UpdateUserRequest extends FormRequest
 				'email',
 				Rule::unique('users', 'email')->ignore($this->user)
 			],
+			'role' => [
+				'required',
+				'string',
+			],
+			'dept' => [
+				'nullable',
+				'string',
+			],
 			'password' => [
 				'nullable',
 				'confirmed',

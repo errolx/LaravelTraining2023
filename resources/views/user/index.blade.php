@@ -46,6 +46,8 @@
 					<th class="border-gray-200">Email</th>
 					<th class="border-gray-200">Date Added</th>
 					<th class="border-gray-200">Date Updated</th>
+					<th class="border-gray-200">Role</th>
+					<th class="border-gray-200">Department</th>
 					<th class="border-gray-200">Action</th>
 				</tr>
 			</thead>
@@ -58,6 +60,8 @@
 						<td valign="middle"><span class="fw-normal">{{ $user->email }}</span></td>
 						<td valign="middle"><span class="fw-normal">{{ $user->created_at }}</span></td>
 						<td valign="middle"><span class="fw-normal">{{ $user->updated_at }}</span></td>
+						<td valign="middle"><span class="fw-normal">{{ $user->role }}</span></td>
+						<td valign="middle"><span class="fw-normal">{{ $user->dept }}</span></td>
 						<td valign="middle">
 							<a href="{{ route('users.show', $user->id) }}" class="btn btn-sm btn-pill btn-outline-tertiary">Show</a>
 						</td>

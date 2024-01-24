@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Hash;
-
 use App\Models\User;
 
 class UserController extends Controller
@@ -51,6 +50,8 @@ class UserController extends Controller
 		$user->name 				= $validated['name'];
 		$user->email 				= $validated['email'];
 		$user->password 		= Hash::make($validated['password']);
+		$user->role 				= $validated['role'];
+		$user->dept 				= $validated['dept'];
 		$user->save();
 
 		// redirect to users page
@@ -84,6 +85,8 @@ class UserController extends Controller
 		// update User
 		$user->name 				= $validated['name'];
 		$user->email 				= $validated['email'];
+		$user->role 				= $validated['role'];
+		$user->dept 				= $validated['dept'];
 
 		if ($request->has('password')) {
 			// dd($request->password);

@@ -23,6 +23,8 @@ class UserSeeder extends Seeder
 				'email'    		=> 'test@test.com',
 				'password'    => Hash::make('12345678'),
 				'email_verified_at' => Carbon::now(),
+				'role'    		=> 'Admin',
+				'dept'    		=> 'Admin',
 				'created_at'  => Carbon::now(),
 				'updated_at'  => Carbon::now(),
 			]

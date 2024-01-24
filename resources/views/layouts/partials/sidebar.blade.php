@@ -45,14 +45,6 @@
             </div>
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
-            <li class="nav-item">
-                <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center">
-                    <span class="sidebar-icon">
-                        <img src="{{ asset('img/brand/light.svg') }}" height="20" width="20" alt="Volt Logo">
-                    </span>
-                    <span class="mt-1 ms-1 sidebar-text">CMS</span>
-                </a>
-            </li>
             <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                 <a href="{{ route('dashboard') }}" class="nav-link">
                     <span class="sidebar-icon">
@@ -61,28 +53,24 @@
                     <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
-                <a href="{{ route('users.index') }}" class="nav-link">
+
+            @if (Auth::user()->role == 'Admin')
+                <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
+                    <a href="{{ route('users.index') }}" class="nav-link">
+                        <span class="sidebar-icon">
+                            <i class="icon icon-xs me-2  bi bi-person-bounding-box"></i>
+                        </span>
+                        <span class="sidebar-text">Users Management</span>
+                    </a>
+                </li>
+            @endif
+
+            <li class="nav-item {{ request()->routeIs('responses.*') ? 'active' : '' }}">
+                <a href="{{ route('responses.index') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <i class="icon icon-xs me-2  bi bi-person-bounding-box"></i>
                     </span>
-                    <span class="sidebar-text">Users Management</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->routeIs('contacts.*') ? 'active' : '' }}">
-                <a href="{{ route('contacts.index') }}" class="nav-link">
-                    <span class="sidebar-icon">
-                        <i class="icon icon-xs me-2  bi bi-person-bounding-box"></i>
-                    </span>
-                    <span class="sidebar-text">Contacts Management</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->routeIs('categories.*') ? 'active' : '' }}">
-                <a href="{{ route('categories.index') }}" class="nav-link">
-                    <span class="sidebar-icon">
-                        <i class="icon icon-xs me-2  bi bi-person-bounding-box"></i>
-                    </span>
-                    <span class="sidebar-text">Categories</span>
+                    <span class="sidebar-text">Responses</span>
                 </a>
             </li>
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
@@ -94,15 +82,7 @@
                     <span class="sidebar-text">Homepage</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a target="_blank" href="#"
-                    class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
-                    <span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
-                        <i class="icon icon-xs me-2 bi bi-globe"></i>
-                    </span>
-                    <span>Laravel Training</span>
-                </a>
-            </li>
+
         </ul>
     </div>
 </nav>
